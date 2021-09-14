@@ -7,10 +7,10 @@
 }
 
 * .ergonomica {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: #F3F3F3;
-  padding: 70px 300px 42px 30px;
+  padding: 70px 300px 200px 30px;
 }
 
 * .ergonomica .container {
@@ -101,9 +101,10 @@
   width: 474px;
 }
 
-@media screen and (max-height: 1024px) {
+@media screen and (max-height: 1025px) {
   * .ergonomica {
     padding: unset;
+    padding-bottom: 100px;
   }
 }
 
@@ -125,7 +126,7 @@
 }
 
 * .assistant .container .assistant__about {
-  width: 600px;
+  width: 700px;
 }
 
 * .assistant .container .assistant__about .assistant__title {
@@ -154,9 +155,9 @@
 }
 
 * .assistant .container .assistant__about .assistant__subtitle_left {
-  font-size: 3vw;
+  font-size: 2.6vw;
   margin-left: 50px;
-  width: 700px;
+  width: 650px;
 }
 
 * .assistant .container .bot {
@@ -190,12 +191,16 @@
 
 * .assistant .container .bot__assistant {
   z-index: 1;
-  width: 100%;
 }
 
 * .assistant .container .bot__assistant > img {
-  width: 100vw;
-  height: 800px;
+  width: 477px;
+}
+
+@media screen and (max-height: 1025px) {
+  * .assistant .container .bot__assistant > img {
+    height: 500px;
+  }
 }
 
 * .assistant .container .mobile {
@@ -208,12 +213,12 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 100%;
+  width: 800px;
   margin: 50px auto;
 }
 
 * .assistant .container .mobile > img {
-  width: 100vw;
+  width: 100%;
   height: auto;
 }
 
@@ -278,8 +283,8 @@
     transform: scale(0.5, 0.5);
   }
   50% {
-    -webkit-transform: scale(1.8, 1.8);
-    transform: scale(1.8, 1.8);
+    -webkit-transform: scale(1.5, 1.5);
+    transform: scale(1.5, 1.5);
   }
   100% {
     -webkit-transform: scale(1, 1);
@@ -293,8 +298,8 @@
     transform: scale(0.5, 0.5);
   }
   50% {
-    -webkit-transform: scale(1.8, 1.8);
-    transform: scale(1.8, 1.8);
+    -webkit-transform: scale(1.5, 1.5);
+    transform: scale(1.5, 1.5);
   }
   100% {
     -webkit-transform: scale(1, 1);
@@ -305,9 +310,7 @@
 @media screen and (max-width: 768px) {
   * .ergonomica {
     padding: 12px;
-    min-height: 100vh;
     background-color: #F3F3F3;
-    margin-bottom: 150px;
   }
   * .ergonomica .container {
     display: block;

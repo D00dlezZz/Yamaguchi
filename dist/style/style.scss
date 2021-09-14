@@ -5,10 +5,10 @@
     max-width: 100%;
 
     .ergonomica{
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         background-color: #F3F3F3;
-        padding: 70px 300px 42px 30px;
+        padding: 70px 300px 200px 30px;
 
         .container {
             display: flex;
@@ -85,12 +85,12 @@
             }                 
         }
     }
-    @media screen and (max-height: 1024px){ 
+    @media screen and (max-height: 1025px){ 
         .ergonomica {
             padding: unset;
+            padding-bottom: 100px;
+            
         }
-
-        
     }
     .assistant {
         background: url(../img/sectionback.png) no-repeat;
@@ -103,7 +103,7 @@
             display: flex;
             justify-content: space-between;
             .assistant__about {
-                width: 600px;
+                width: 700px;
                 .assistant__title {
                     font-style: normal;
                     font-weight: normal;
@@ -125,14 +125,12 @@
                     font-size: 2.5vw;
                     line-height: 90px;
                     margin-top: 20px;
-    
                     &_left {
-                        font-size: 3vw;
+                        font-size: 2.6vw;
                         margin-left: 50px;
-                        width: 700px;
+                        width: 650px;
                     }
                 }
-
             }
 
             .bot {
@@ -142,7 +140,6 @@
                 flex-direction: column;
                 justify-content: flex-end;
                 align-items: center;
-            
                 opacity: 0;
 
                 &__hole {
@@ -154,10 +151,12 @@
                 }
                 &__assistant {
                     z-index: 1;   
-                    width: 100%; 
+
                     >img {
-                        width: 100vw;
-                        height: 800px;
+                        width: 477px;
+                        @media screen and (max-height: 1025px) {
+                            height: 500px;
+                        }
                     }
                 }
             }
@@ -166,10 +165,10 @@
                 display: flex;
                 justify-content: center;
                 align-items: flex-start;
-                width: 100%;
+                width: 800px;
                 margin: 50px auto;
                 > img {
-                    width: 100vw;
+                    width: 100%;
                     height: auto;
                 }
             }
@@ -217,8 +216,8 @@
         transform: scale(0.5, 0.5)
         }
         50% {
-        -webkit-transform: scale(1.8, 1.8);
-        transform: scale(1.8, 1.8);
+        -webkit-transform: scale(1.5, 1.5);
+        transform: scale(1.5, 1.5);
         }
         100% {
         -webkit-transform: scale(1, 1);
@@ -231,9 +230,8 @@
 
         .ergonomica {
             padding: 12px;
-            min-height: 100vh;
+        
             background-color: #F3F3F3;
-            margin-bottom: 150px;
 
             .container {
                 display: block;
