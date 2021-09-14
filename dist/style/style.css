@@ -9,8 +9,8 @@
 * .ergonomica {
   width: 100vw;
   height: 100vh;
+  background-color: #F3F3F3;
   padding: 70px 200px 42px 30px;
-  margin-bottom: 100px;
 }
 
 * .ergonomica .container {
@@ -29,14 +29,14 @@
 }
 
 * .ergonomica .container .ergonomica__about .ergonomica__title {
-  font-size: 3vw;
+  font-size: 62px;
   color: #0B64FE;
   font-weight: normal;
 }
 
 * .ergonomica .container .ergonomica__about .ergonomica__text {
   font-weight: 300;
-  font-size: 1.1vw;
+  font-size: 22px;
   margin-top: 40px;
   line-height: 170%;
 }
@@ -83,7 +83,9 @@
 * .ergonomica .container .button__wrapper {
   position: absolute;
   left: 20%;
-  bottom: 20%;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  bottom: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,48 +103,54 @@
   background-size: cover;
   color: #FFFFFF;
   font-family: Montserrat;
-  padding: 70px 200px 42px 120px;
-  width: 100vw;
-  min-height: 100vh;
+  padding: 70px 50px 42px 120px;
 }
 
-* .container {
+* .assistant .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-* .container .assistant__title {
+* .assistant .container .assistant__about {
+  width: 600px;
+}
+
+* .assistant .container .assistant__about .assistant__title {
   font-style: normal;
   font-weight: normal;
-  font-size: 56px;
+  font-size: 3vw;
   line-height: normal;
   margin-bottom: 10px;
 }
 
-* .container .assistant__text {
+* .assistant .container .assistant__about .assistant__text {
   font-style: normal;
   font-weight: normal;
-  font-size: 22px;
+  font-size: 1.1vw;
   line-height: 170%;
   margin-top: 40px;
   max-width: 586px;
 }
 
-* .container .assistant__subtitle {
+* .assistant .container .assistant__about .assistant__subtitle {
   font-style: normal;
   font-weight: 900;
-  font-size: 44.7911px;
+  font-size: 2.5vw;
   line-height: 90px;
+  margin-top: 20px;
 }
 
-* .container .assistant__subtitle_left {
-  font-size: 61.4163px;
+* .assistant .container .assistant__about .assistant__subtitle_left {
+  font-size: 3vw;
   margin-left: 50px;
   width: 700px;
 }
 
-* .container .bot {
+* .assistant .container .bot {
   overflow: hidden;
   position: relative;
   display: -webkit-box;
@@ -152,42 +160,52 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   opacity: 0;
 }
 
-* .container .bot__hole {
+* .assistant .container .bot__hole {
   position: relative;
   width: 200px;
   height: 70px;
 }
 
-* .container .bot > img {
+* .assistant .container .bot > img {
   height: 200px;
 }
 
-* .container .bot__assistant {
+* .assistant .container .bot__assistant {
   z-index: 1;
-  width: 900px;
-  height: auto;
-}
-
-* .container .bot__assistant > img {
   width: 100%;
-  height: auto;
 }
 
-* .container .mobile {
-  width: 670px;
+* .assistant .container .bot__assistant > img {
+  width: 100vw;
+  height: 800px;
+}
+
+* .assistant .container .mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
   margin: 50px auto;
 }
 
-* .container .mobile > img {
-  width: 100%;
+* .assistant .container .mobile > img {
+  width: 100vw;
   height: auto;
-  margin: 0 auto;
 }
 
 * .animate_appearance {
@@ -268,6 +286,53 @@
   100% {
     -webkit-transform: scale(1, 1);
     transform: scale(1, 1);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ergonomica {
+    padding: 12px;
+    min-height: 100vh;
+    background-color: #F3F3F3;
+  }
+  .ergonomica .container {
+    display: block;
+  }
+  .ergonomica .container .ergonomica__about .ergonomica__title {
+    margin-bottom: 30px;
+    font-family: 'Bebas Neue', cursive;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 100%;
+    color: #0B64FE;
+  }
+  .ergonomica .container .ergonomica__about .ergonomica__text {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 170%;
+    /* or 27px */
+    color: #181818;
+  }
+  .ergonomica .container .ergonomica__table {
+    position: relative;
+    margin: 0 auto;
+    width: 332px;
+  }
+  .ergonomica .container .button__wrapper {
+    width: 144px;
+    left: 25%;
+    top: 80%;
+  }
+  .ergonomica .container .button__wrapper .button {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12.2752px;
+    line-height: 170%;
+    width: 61.15px;
+    height: 61.15px;
   }
 }
 /*# sourceMappingURL=style.css.map */

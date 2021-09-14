@@ -3,11 +3,12 @@
     padding: 0;
     box-sizing: border-box; 
     max-width: 100%;
+
     .ergonomica{
         width: 100vw;
         height: 100vh;
+        background-color: #F3F3F3;
         padding: 70px 200px 42px 30px;
-        margin-bottom: 100px;
 
         .container {
             display: flex;
@@ -19,13 +20,13 @@
                 max-width: 500px;
 
                 .ergonomica__title {
-                    font-size: 3vw;
+                    font-size: 62px;
                     color: #0B64FE;
                     font-weight: normal;
                 }
                 .ergonomica__text {               
                     font-weight: 300;
-                    font-size:  1.1vw;
+                    font-size:  22px;
                     margin-top: 40px;
                     line-height: 170%;
                 }
@@ -70,8 +71,8 @@
                 &__wrapper {
                     position: absolute;
                     left: 20%;
-                    // transform: translateY(-100%);
-                    bottom: 20%;
+                    transform: translateY(-100%);
+                    bottom: 15%;
 
                     display: flex;
                     justify-content: space-between;
@@ -90,76 +91,83 @@
         background-size: cover;
         color: #FFFFFF;
         font-family: Montserrat;
-        padding:70px 200px 42px 120px;
-        width: 100vw;
-        min-height: 100vh;
-    }
-    .container {
-        display: flex;
-        .assistant__title {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 56px;
-            line-height:  normal;
-            margin-bottom: 10px;
-        }
-        .assistant__text{
-            font-style: normal;
-            font-weight: normal;
-            font-size: 22px;
-            line-height: 170%;
-            margin-top: 40px;
-            max-width: 586px;
-        }
-        .assistant__subtitle {
-            font-style: normal;
-            font-weight: 900;
-            font-size: 44.7911px;
-            line-height: 90px;
-
-            &_left {
-                font-size: 61.4163px;
-                margin-left: 50px;
-                width: 700px;
-            }
-        }
-        .bot {
-            overflow: hidden;
-            position: relative;
+        padding:70px 50px 42px 120px;
+    
+        .container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-        
-            opacity: 0;
+            justify-content: space-between;
+            .assistant__about {
+                width: 600px;
+                .assistant__title {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 3vw;
+                    line-height:  normal;
+                    margin-bottom: 10px;
+                }
+                .assistant__text{
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 1.1vw;
+                    line-height: 170%;
+                    margin-top: 40px;
+                    max-width: 586px;
+                }
+                .assistant__subtitle {
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 2.5vw;
+                    line-height: 90px;
+                    margin-top: 20px;
+    
+                    &_left {
+                        font-size: 3vw;
+                        margin-left: 50px;
+                        width: 700px;
+                    }
+                }
 
-            &__hole {
-                position: relative;
-                width: 200px;
-                height: 70px;
-            }>img {
-                height: 200px;
             }
-            &__assistant {
-                z-index: 1;
-                width: 900px;
-                height: auto;
-                >img {
-                    width: 100%;
+
+            .bot {
+                overflow: hidden;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+            
+                opacity: 0;
+
+                &__hole {
+                    position: relative;
+                    width: 200px;
+                    height: 70px;
+                }>img {
+                    height: 200px;
+                }
+                &__assistant {
+                    z-index: 1;   
+                    width: 100%; 
+                    >img {
+                        width: 100vw;
+                        height: 800px;
+                    }
+                }
+            }
+
+            .mobile {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                width: 100%;
+                margin: 50px auto;
+                > img {
+                    width: 100vw;
                     height: auto;
                 }
             }
         }
-
-        .mobile {
-            width: 670px;
-            margin: 50px auto;
-            > img {
-                width: 100%;
-                height: auto;
-                 margin: 0 auto;
-            }
-        }
-
     }
 
     // animation //
@@ -207,9 +215,66 @@
         transform: scale(1, 1);
         }
     }
+}
+
+    @media screen and (max-width: 768px ) {
+
+        .ergonomica {
+            padding: 12px;
+            min-height: 100vh;
+            background-color: #F3F3F3;
+
+            .container {
+                display: block;
+                .ergonomica__about{
+                    .ergonomica__title {
+                        margin-bottom: 30px;
+                        font-family: 'Bebas Neue', cursive;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 38px; //38 - 62
+                        line-height: 100%;
+                        color: #0B64FE;
+                    }
+                    .ergonomica__text {
+                        font-family: 'Ubuntu', sans-serif;
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 16px; //12 - 22
+                        line-height: 170%;
+                                /* or 27px */
+                        
+                        color: #181818;
+                
+                    }
+                }
+                .ergonomica__table {
+                    position: relative;
+                    margin:  0 auto;
+                    width: 332px;
+                    // display: none;
+                }
+                .button__wrapper {
+                    width: 144px;
+                    left: 25%;
+                    top: 80%;
+                    .button {
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 12.2752px;
+                        line-height: 170%;
+                        width: 61.15px;
+                        height: 61.15px;      
+                    }
+                }
+              
+            }  
+        }
+
+    }
 
         
-}
+
 
 
    
