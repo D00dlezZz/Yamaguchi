@@ -208,6 +208,10 @@
   height: auto;
 }
 
+* .assistant .container .assistant__subtitle-wrapper_mobile {
+  display: none;
+}
+
 * .animate_appearance {
   -webkit-animation: 3s ease-in appearance;
           animation: 3s ease-in appearance;
@@ -290,24 +294,23 @@
 }
 
 @media screen and (max-width: 768px) {
-  .ergonomica {
+  * .ergonomica {
     padding: 12px;
     min-height: 100vh;
     background-color: #F3F3F3;
+    margin-bottom: 100px;
   }
-  .ergonomica .container {
+  * .ergonomica .container {
     display: block;
   }
-  .ergonomica .container .ergonomica__about .ergonomica__title {
+  * .ergonomica .container .ergonomica__about .ergonomica__title {
     margin-bottom: 30px;
-    font-family: 'Bebas Neue', cursive;
     font-style: normal;
-    font-weight: bold;
     font-size: 38px;
     line-height: 100%;
     color: #0B64FE;
   }
-  .ergonomica .container .ergonomica__about .ergonomica__text {
+  * .ergonomica .container .ergonomica__about .ergonomica__text {
     font-family: 'Ubuntu', sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -316,23 +319,81 @@
     /* or 27px */
     color: #181818;
   }
-  .ergonomica .container .ergonomica__table {
+  * .ergonomica .container .ergonomica__table {
     position: relative;
     margin: 0 auto;
     width: 332px;
   }
-  .ergonomica .container .button__wrapper {
+  * .ergonomica .container .button__wrapper {
     width: 144px;
     left: 25%;
     top: 80%;
   }
-  .ergonomica .container .button__wrapper .button {
+  * .ergonomica .container .button__wrapper .button {
     font-style: normal;
     font-weight: 300;
     font-size: 12.2752px;
     line-height: 170%;
     width: 61.15px;
     height: 61.15px;
+  }
+  * .assistant {
+    padding: 12px;
+  }
+  * .assistant .container {
+    display: block;
+  }
+  * .assistant .container .assistant__about .assistant__title {
+    font-size: 34px;
+  }
+  * .assistant .container .assistant__about .assistant__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 170%;
+  }
+  * .assistant .container .assistant__about .assistant__subtitle-wrapper {
+    display: none;
+  }
+  * .assistant .container .bot__assistant > img {
+    height: 600px;
+  }
+  * .assistant .container .assistant__subtitle-wrapper_mobile {
+    display: block;
+  }
+  * .assistant .container .assistant__subtitle-wrapper_mobile .assistant__subtitle {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 38.6546px;
+    line-height: 120%;
+  }
+  @-webkit-keyframes pulsing {
+    0% {
+      -webkit-transform: scale(0.5, 0.5);
+      transform: scale(0.5, 0.5);
+    }
+    50% {
+      -webkit-transform: scale(1, 1);
+      transform: scale(1.3, 1.3);
+    }
+    100% {
+      -webkit-transform: scale(1, 1);
+      transform: scale(1, 1);
+    }
+  }
+  @keyframes pulsing {
+    0% {
+      -webkit-transform: scale(0.5, 0.5);
+      transform: scale(0.5, 0.5);
+    }
+    50% {
+      -webkit-transform: scale(1, 1);
+      transform: scale(1.3, 1.3);
+    }
+    100% {
+      -webkit-transform: scale(1, 1);
+      transform: scale(1, 1);
+    }
   }
 }
 /*# sourceMappingURL=style.css.map */
