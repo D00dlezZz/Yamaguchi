@@ -3,38 +3,40 @@
     padding: 0;
     box-sizing: border-box;
     .ergonomica{
+        width: 100vw;
+        height: 100vh;
         padding: 26px 200px 42px 62px;
         .container {
             display: flex;
-            // justify-content: space-between;
+            justify-content:center;
 
             font-family: Ubuntu;
             font-style: normal; 
             margin: 0 auto;
-            width: 100vw;
-            height: 100vh;
 
             .ergonomica__about {
                 max-width: 500px;
-                margin-right: 50px;
-
                 .ergonomica__title {
-                    font-size: clamp(38px, 1rem + 2.4vw, 62px);
+                    font-size: 3vw;
                     color: #0B64FE;
                     font-weight: normal;
                 }
                 .ergonomica__text {               
                     font-weight: 300;
-                    font-size: 22px;
+                    font-size:  1.1vw;
                     margin-top: 40px;
                     line-height: 170%;
                 }
             }
             .table {
-                height: 270px;
-                max-width: 780px;
-                margin: 0 100px;
+                position: relative;
+                min-height: 270px;
+                max-width: 930px;
+        
                 &__top {
+                    transform: translateY(45px);
+                    transition: .5s;
+    
                     width: 100%;
                     height: auto;
                     >img {
@@ -51,11 +53,30 @@
                     }
                 }
             }
-            .button {
-                color: black;
+            
+            .button{
                 font-size: 40px;
-        
+                font-weight: 300;
+                background-color: #A6FFFF;
+                border: none;
+                border-radius: 50%;
+                width: 200px;
+                height: 200px;
+                &__wrapper {
+                    position: absolute;
+                    left: 20%;
+                    // transform: translateY(-100%);
+                    bottom: 30%;
+
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    width: 474px;
+                }
             }
+            
+            
                 
         }
     }

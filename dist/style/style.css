@@ -6,6 +6,8 @@
 }
 
 * .ergonomica {
+  width: 100vw;
+  height: 100vh;
   padding: 26px 200px 42px 62px;
 }
 
@@ -13,40 +15,49 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: Ubuntu;
   font-style: normal;
   margin: 0 auto;
-  width: 100vw;
-  height: 100vh;
 }
 
 * .ergonomica .container .ergonomica__about {
   max-width: 500px;
-  margin-right: 50px;
 }
 
 * .ergonomica .container .ergonomica__about .ergonomica__title {
-  font-size: 62px;
+  font-size: 3vw;
   color: #0B64FE;
   font-weight: normal;
 }
 
 * .ergonomica .container .ergonomica__about .ergonomica__text {
   font-weight: 300;
-  font-size: 22px;
+  font-size: 1.1vw;
   margin-top: 40px;
   line-height: 170%;
 }
 
 * .ergonomica .container .table {
-  height: 270px;
-  max-width: 780px;
-  margin: 0 100px;
+  position: relative;
+  min-height: 270px;
+  max-width: 930px;
 }
 
 * .ergonomica .container .table__top {
+  -webkit-transform: translateY(45px);
+          transform: translateY(45px);
+  -webkit-transition: .5s;
+  transition: .5s;
   width: 100%;
   height: auto;
+}
+
+* .ergonomica .container .table__top > img {
+  height: 100%;
+  width: 100%;
 }
 
 * .ergonomica .container .table__bottom {
@@ -54,29 +65,25 @@
   height: auto;
 }
 
+* .ergonomica .container .table__bottom > img {
+  height: 100%;
+  width: 100%;
+}
+
 * .ergonomica .container .button {
-  cursor: pointer;
-  place-content: center;
-  width: 200px;
-  height: 200px;
+  font-size: 40px;
+  font-weight: 300;
+  background-color: #A6FFFF;
   border: none;
   border-radius: 50%;
-  background-color: #A6FFFF;
-  font-family: 'Ubuntu', sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 12.2752px;
-  line-height: 170%;
-  /* or 21px */
-  color: #000000;
+  width: 200px;
+  height: 200px;
 }
 
 * .ergonomica .container .button__wrapper {
   position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  bottom: 20px;
+  left: 20%;
+  bottom: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,6 +93,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 144px;
+  width: 474px;
 }
 /*# sourceMappingURL=style.css.map */
