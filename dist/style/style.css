@@ -10,16 +10,17 @@
   width: 100vw;
   height: 100vh;
   background-color: #F3F3F3;
-  padding: 70px 200px 42px 30px;
+  padding: 70px 400px 42px 30px;
 }
 
 * .ergonomica .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
   font-family: Ubuntu;
   font-style: normal;
 }
@@ -42,8 +43,10 @@
 }
 
 * .ergonomica .container .table {
-  position: relative;
+  position: absolute;
   max-width: 930px;
+  top: 20px;
+  left: 35px;
 }
 
 * .ergonomica .container .table__top {
@@ -82,10 +85,10 @@
 
 * .ergonomica .container .button__wrapper {
   position: absolute;
-  left: 20%;
+  left: 19%;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
-  bottom: 15%;
+  bottom: -15%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -323,6 +326,9 @@
     position: relative;
     margin: 0 auto;
     width: 332px;
+  }
+  * .ergonomica .container .ergonomica__table .table {
+    position: static;
   }
   * .ergonomica .container .button__wrapper {
     width: 144px;

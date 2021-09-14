@@ -8,11 +8,12 @@
         width: 100vw;
         height: 100vh;
         background-color: #F3F3F3;
-        padding: 70px 200px 42px 30px;
+        padding: 70px 400px 42px 30px;
 
         .container {
             display: flex;
-            justify-content:center;
+            justify-content: flex-end;
+            position: relative;
             font-family: Ubuntu;
             font-style: normal; 
 
@@ -33,8 +34,10 @@
             }
 
             .table {
-                position: relative;
+                position: absolute;
                 max-width: 930px;
+                top: 20px;
+                left: 35px;
         
                 &__top {
                     transform: translateY(45px);
@@ -70,9 +73,9 @@
 
                 &__wrapper {
                     position: absolute;
-                    left: 20%;
+                    left: 19%;
                     transform: translateY(-100%);
-                    bottom: 15%;
+                    bottom: -15%;
 
                     display: flex;
                     justify-content: space-between;
@@ -256,6 +259,9 @@
                     margin:  0 auto;
                     width: 332px;
                     // display: none;
+                    .table {
+                        position: static;
+                    }
                 }
                 .button__wrapper {
                     width: 144px;
