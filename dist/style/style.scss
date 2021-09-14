@@ -7,6 +7,7 @@
         width: 100vw;
         height: 100vh;
         padding: 70px 200px 42px 30px;
+        margin-bottom: 100px;
 
         .container {
             display: flex;
@@ -32,7 +33,6 @@
 
             .table {
                 position: relative;
-                min-height: 270px;
                 max-width: 930px;
         
                 &__top {
@@ -92,7 +92,7 @@
         font-family: Montserrat;
         padding:70px 200px 42px 120px;
         width: 100vw;
-        height: 100vh;
+        min-height: 100vh;
     }
     .container {
         display: flex;
@@ -124,17 +124,24 @@
             }
         }
         .bot {
+            overflow: hidden;
             position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
+        
+            opacity: 0;
 
             &__hole {
                 position: relative;
-            } 
-
+                width: 200px;
+                height: 70px;
+            }>img {
+                height: 200px;
+            }
             &__assistant {
-                width: 477px;
+                z-index: 1;
+                width: 900px;
                 height: auto;
                 >img {
                     width: 100%;
@@ -144,7 +151,7 @@
         }
 
         .mobile {
-            width: 842px;
+            width: 670px;
             margin: 50px auto;
             > img {
                 width: 100%;
@@ -153,6 +160,52 @@
             }
         }
 
+    }
+
+    // animation //
+
+    .animate_appearance {
+        animation: 3s ease-in appearance;
+    }
+
+    .animate_pulsing {
+        animation: pulsing 5s;
+    }
+      
+    .animate_levitate {
+        animation: 3s ease-in levitate infinite alternate;
+    }
+    
+    @keyframes appearance {
+        0% {
+            transform: translateY(101%);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+    
+    
+    @keyframes levitate {
+        100% {
+            transform: translateY(30px);
+        }
+    }
+
+
+    @keyframes pulsing {
+        0% {
+        -webkit-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5)
+        }
+        50% {
+        -webkit-transform: scale(1.8, 1.8);
+        transform: scale(1.8, 1.8);
+        }
+        100% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+        }
     }
 
         
